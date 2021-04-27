@@ -105,7 +105,7 @@ Linux)
         alias egrep='egrep --color=auto'
     fi
     ;;
-Darwin)
+Mac)
     CLICOLOR=1
     #export LSCOLORS=ExFxBxDxCxegedabagacad
     LSCOLORS=GxFxCxDxBxegedabagaced 
