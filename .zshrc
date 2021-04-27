@@ -48,6 +48,6 @@ Mac)
 esac
 
 NEWLINE=$'\n'
-export PS1="%B%F{green}---------- %* (%n@%m) %~ ----------${NEWLINE}==> "
+export PS1="%B%F{green}---------- %* (%n@%m) %F{white}:%F{blue}%~ %F{green}----------%F{yellow}${NEWLINE}==>%b%f "
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
