@@ -1,0 +1,28 @@
+#!/bin/bash
+
+TEXT=$1
+
+if [ -z "$TEXT" ]
+then
+  echo "Usage:"
+  echo "  $0 <process-description>"
+  echo
+  echo "Example:"
+  echo "  $0 node.Corda"
+  exit
+fi
+
+echo "Attempting to kill [ $TEXT ]..."
+if [ -x "$(command -v pkill)" ]
+then
+  pkill -c -f "$TEXT"
+
+else
+  # find all processes containing the input text, but skip the grep process itself
+  pids=$(ps aux | grep "[${TEXT:0:1}]${TEXT:1}" | grep -v grep | grep -v $0 | awk '{print $2}')
+  for pid in $pids
+  do
+    echo "PID: $pid"
+    kill $pid
+  done
+fi
