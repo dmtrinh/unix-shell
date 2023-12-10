@@ -21,6 +21,7 @@ curl -s "https://get.sdkman.io" | bash
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
+* [Fig](https://fig.io/) adds visual apps, shortcuts, and autocomplete to your terminal.
 * [Homebrew](https://brew.sh/) package manager.  Since Homebrew packages are designed to only provide per-user functionality, Homebrew can be used alongside the native system package manager without creating conflicts.
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
